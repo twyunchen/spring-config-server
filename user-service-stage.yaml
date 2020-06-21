@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://mysql-server:3306/spring-homework
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  port: 80
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server/eureka/
+ribbon:
+  eureka:
+    enabled: true
+
+feign:
+  hystrix:
+    enabled: true
